@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  -->
+ 
+    <style>
+ 
+        caption{
+            text-align: center;
+        }
+        td{
+            text-align:center;
+            width:50px;
+            height: 50px;
+            border : 1px solid;
+        }
+    </style>
+    <table border="1" width="400px">
+    <caption>기본테이블</caption>
+        <tr>            <!--tbody가 자동으로 추가된다-->
+            <th>원제목1</th>
+            <th>원제목2</th>
+            <th>원제목3</th>
+        </tr>
+        <tr>
+            <td>Value1</td>
+            <td>Value2</td>
+            <td>Value3</td>
+        </tr>
+        <tr>
+            <td>Value1</td>
+            <td>Value2</td>
+            <td>Value3</td>
+        </tr>
+        <tr>
+            <td>Value1</td>
+            <td>Value2</td>
+            <td>Value3</td>
+        </tr>
+    </table>
+    <hr>
+    <caption>ROWSPAN</caption>
+    <table>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td rowspan="4">4</td>
+        </tr>
+        <tr>
+            <!-- <td>5</td> -->
+            <td>6</td>
+            <td rowspan="3">7</td>
+            <!-- <td>8</td> -->
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <!-- <td>11</td> -->
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <!-- <td>15</td> -->
+            <td>16</td>
+        </tr>
+    </table>
+    <hr>
+    <caption>colspan</caption>
+    <table>
+        <tr>
+            <td colspan="2">1</td>
+            <!-- <td>2</td> -->
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td colspan="4">9</td>
+            <!-- <td>10</td>
+            <td>11</td>
+            <td>12</td> -->
+        </tr>
+        <tr>
+            <td>13</td>
+            <td colspan="2">14</td>
+            <!-- <td>15</td> -->
+            <td>16</td>
+        </tr>
+    </table> 
+
+
+
+</body>
+</html>
