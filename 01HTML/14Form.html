@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <style>
+        .icon{
+            width: 15px;
+            height: 15px;
+            border: 1px solid 0;
+        }
+        *{
+            box-sizing: border-box;
+            background-color: rgb(59, 59, 59);
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        body{
+            
+            margin: 0;
+            padding: 0;
+        }
+        .btn{
+            width: 40%;
+            height: 100%;
+            min-width: 80px;
+            text-align: center;
+            line-height: 35px;
+            font-size: 0.8rem;
+            border: 1px solid gray;
+            background-color: rgb(206, 206, 206);
+        }
+        .btn-submit{
+            width: 460px;
+            height: 52px;
+            background-color: orange;
+            clear: white;
+            border: 0;
+        }
+
+        form{
+            height: 882px;
+            width: 500px;
+        }
+        form>.row{
+            margin: 10px;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            gap: 5px;
+            height: 35px;
+        }
+        form>.row>label{
+            display: block;
+            min-width: 85px;
+            height: 100%;
+            line-height: 35px;
+        }
+        form>.row>input[type="text"],
+        form>.row>input[type="password"],
+        form>.row>select
+        {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            border-radius: 0;
+            border: 1px solid gray;
+        }
+        .top-header{
+            height: 15px ;
+            background-color: black ;
+        }
+        .title{
+            margin-bottom: 0px ;
+            border-bottom: 1px solid gray;
+            padding-bottom: 0px;
+        }
+        .Th1{
+            height: 50;
+            width: 500;
+            padding: 19px 115px 19px 20px;
+        }
+        .blind{
+            color: rgb(3, 199, 20);
+            font-size: 20px;
+            font-weight: 1000;
+            text-align: initial;
+            
+            border: 1px solid;
+
+        }
+        .link{
+
+        }
+
+
+
+
+
+
+
+
+    </style> -->
+
+    <style>
+        :root{
+	--body-background-color: #f5f6f7;
+	--font-color: #4e4e4e;
+	--border-gray-color : #dadada;
+	--naver-green-color: #04c75a;
+	--naver-green-border-color: #06b350;
+}
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	background:var(--body-background-color);
+}
+
+.main-container{
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.main-container .main-wrap{
+	width:500px;
+
+}
+.main-container .main-wrap .sel-lang-wrap .lang-select
+{
+	width: 96px;
+	height: 30px;
+	color: var(--font-color);
+	border: solid 1px var(--border-gray-color);
+}
+.main-container .main-wrap .logo{
+	padding:16px 115px 16px 20px;
+}
+.main-container .main-wrap .logo-wrap img
+{
+	width: 365px;
+	height: 18px;
+}
+
+.main-container .main-wrap header .sel-lang-wrap{
+	display:flex;
+	justify-content:flex-end;
+}
+
+.main-container .main-wrap header .logo{
+	display:flex;	
+	flex-direction: column;
+	align-items: left;
+    color: #04c75a;
+    font: var(--border-gray-color);
+}
+.login-input-section-wrap{
+	padding-top: 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login-input-wrap{
+	width: 465px;
+	height :48px;
+	padding: 0px 10px 0px 45px ;
+    margin-top: -1;
+}
+.password-wrap{
+	margin-top: 13px;
+}
+.login-input-wrap input{
+	border: none;
+	width:430px;
+	margin-top: -1px;
+	font-size: 14px;
+	/* margin-left: 10px; */
+	height:30px;
+}
+.login-button-wrap {
+	padding-top: 13px;
+}
+.login-button-wrap button{
+	width: 465px;
+	height :48px;
+	font-size: 18px;
+	background: var(--naver-green-color);
+	color: white;
+	border: solid 1px var(--naver-green-border-color);
+}
+.login-stay-sign-in{
+	width: 465px;
+	height: 52px;
+	
+	display: flex;
+	font-size: 15px;
+	color: #4e4e4e;
+	align-items: center;
+	justify-content: flex-start;
+	border-bottom: solid 1px var(--border-gray-color);
+}
+.login-stay-sign-in i{
+	font-size: 25px;
+	color: #9ba1a3;
+}
+.login-stay-sign-in span{
+	padding-left: 5px;
+	line-height: 25px;
+}
+
+.Easy-sgin-in-wrap{
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 40px;
+
+}
+.Easy-sgin-in-wrap h2{
+	font-size: 20px;
+}
+.Easy-sgin-in-wrap .sign-button-list
+{
+	padding-top:25px;
+	list-style: none;
+	width: 465px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.Easy-sgin-in-wrap .sign-button-list li{
+	padding-bottom: 10px;
+}
+.Easy-sgin-in-wrap .sign-button-list li button{
+	width: 465px;
+	height: 56px;
+	border: solid 1px var(--border-gray-color);
+	text-align: left;
+	background: white;
+}
+.Easy-sgin-in-wrap .sign-button-list li button i{
+	padding-left: 15px;
+	font-size: 20px;
+}
+.fa-qrcode
+{
+	color:var(--naver-green-color);
+}
+.fa-line{
+	color:var(--naver-green-color);
+}
+.fa-facebook-square
+{
+	color:#4064ac;
+}
+.Easy-sgin-in-wrap .sign-button-list li button span{
+	padding-left: 20px;
+	font-size: 18px;
+}
+.Easy-sgin-in-wrap .forget-msg{
+	color:var(--font-color);
+	font-size: 14px;
+	padding-top: 10px;
+
+}
+footer{
+   
+	padding-top: 95px;
+	padding-bottom: 15px;
+
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	width:768px;
+
+
+
+}
+.copyright-wrap{
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 15px;
+
+
+}
+footer .copyright-wrap span img{
+	width: 59px;
+	
+	height: 11px;
+}
+footer .copyright-wrap span{
+	font-size: 13px;
+	line-height: 15px;
+}
+    </style>
+
+</head>
+<body>
+
+    
+
+    <!-- <form action="">
+        <div class="title"> 
+            <h1 class="Th1">
+               <a href="https://naver.com" class="link">
+                <span class="blind">NAVER</span>
+               </a>
+            </h1>
+        </div>
+        <div class="row">
+            <label for="check1">실명 인증된 아이디로 가입</label>
+            <input id="check1" type="checkbox">
+        </div>
+        <div class="row">
+            <img class="icon" src="./human.png" alt="human">
+            <label>아이디</label>
+            <input name="userid" type="text"/>
+            <samp>@naver.com</samp>
+        </div>
+            <div class="row">
+            <img class="icon" src="./human.png" alt="human">
+            <label>비밀번호</label>
+            <input name="password" type="password"/>
+        </div>
+        <div class="row">
+            <img class="icon" src="./human.png" alt="human">
+            <label>[선택] 이메일주소 (비밀번호 찾기 등 본인 확인용)</label>
+            <input name="zipcode" type="text"/>
+        </div>
+        <ul>
+            <li>아이디: 필수 정보입니다.</li>
+        </ul>
+        <div class="row">
+            <img class="icon" src="./human.png" alt="human">
+            <label>이름</label>
+            <input name="name" type="text"/>
+        </div>
+        <div class="row">
+            <img class="icon" src="./human.png" alt="human">
+            <label>생년월일 8자리</label>
+            <input name="name" type="text"/>
+        </div>
+        <div class="row">
+            <label>생년월일</label>
+
+            <input name="birth" type="submit"> 양력
+            <input name="birth" type="submit"> 음력
+        </div>
+        <p>신분증 상의 이름, 생년월일, 성별과 일치하지 않으면 실명인증이 불가합니다.</p>
+        <ul>
+            <li>이름: 필수 정보입니다.</li>
+            <li>생년월일: 필수 정보입니다.</li>
+        </ul>
+        <div>
+
+                <img class="icon" src="./human.png" alt="human">
+                <select>
+                    <option value="">대한민국 +82</option>
+                    <option value="">네팔 +977</option>
+                </select>
+
+        </div>
+        <div class="row">
+            <img class="icon" src="./human.png" alt="human">
+            <label>휴대전화번호</label>
+            <input name="phone" type="text"/>
+            <ul>
+                <li>휴대전화번호: 필주 정보입니다.</li>
+            </ul>
+        </div>
+        <div class="row">
+            <input class="btn btn-submit" type="submit" value="인증요청"/>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </form> -->
+	<div class="main-container">
+		<div class="main-wrap">
+		<header>
+			<!-- <div class="sel-lang-wrap">
+			</div> -->
+			<div class="logo">
+                <P>NAVER</P>
+			</div>
+		</header>
+		<section class="login-input-section-wrap">
+			<div class="login-input-wrap">	
+				<input placeholder="아이디" type="text"></input>
+			</div>
+			<div class="login-input-wrap password-wrap">	
+				<input placeholder="비밀번호" type="password"></input>
+			</div>
+            <div class="login-input-wrap">	
+				<input placeholder="[선택] 이메일주소 (비밀번호 찾기 등 본인 확인용)" type="text"></input>
+			</div>
+			<div class="login-button-wrap">
+				<button>Sign in</button>
+			</div>
+			<div class="login-stay-sign-in">
+				<i class="far fa-check-circle"></i>
+				<span>Stay Signed in</span>
+			</div>
+		</section>
+		<section class="Easy-sgin-in-wrap">
+			<h2>Easier sign in</h2>
+			<ul class="sign-button-list">
+				<li><button><i class="fas fa-qrcode"></i><span>Sign in with QR code</span></button></li>
+				<li><button><i class="fab fa-facebook-square"></i><span>Facebook</span></button></li>
+				<li><button><i class="fab fa-line"></i><span>line</span></button></li>
+			</ul>
+			<p class="forget-msg">Forgot your Username or Password? | Sign up</p>
+		</section>
+		<footer>
+			<div class="copyright-wrap">
+			<span>	<img src="img/logo.png"> Copyright © NAVER Corp. All Rights Reserved.</span>
+			</div>
+		</footer>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
